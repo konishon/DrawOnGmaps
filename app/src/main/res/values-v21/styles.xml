@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryLightColor</item>
+        <item name="android:colorControlActivated">@color/primaryLightColor</item>
+        <item name="android:colorControlHighlight">@color/primaryLightColor</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+</resources>

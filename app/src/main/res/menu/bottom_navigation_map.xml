@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_undo_drawing"
+        android:enabled="true"
+        android:icon="@drawable/ic_undo_white_24dp"
+        android:title="undo"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_save_drawing"
+        android:enabled="true"
+        android:icon="@drawable/ic_save_white_24dp"
+        android:title="save"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_draw_polygons"
+        android:enabled="true"
+        android:icon="@drawable/bg_btn_use_polygons"
+        android:title="polygons"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_draw_polylines"
+        android:enabled="true"
+        android:icon="@drawable/ic_polyline_state_inactive_24dp"
+        android:title="polylines"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_draw_polygons"
+        android:enabled="true"
+        android:icon="@drawable/ic_polygon_active_24dp"
+        android:title="Polygons"
+        app:showAsAction="ifRoom" >
+
+
+
+    </item>
+
+    <item
+        android:id="@+id/action_draw_polylines"
+        android:enabled="true"
+        android:icon="@drawable/ic_polyline_state_active_24dp"
+        android:title="Polylines"
+        app:showAsAction="ifRoom" />
+
+    <group android:id="@+id/map_layer">
+        <item android:id="@+id/action_use_dark_map" android:title="Dark map" android:icon="@drawable/ic_satellite_orange_50_24dp"/>
+        <item android:id="@+id/action_use_light_map" android:title="Light map" android:icon="@drawable/ic_satellite_orange_50_24dp"/>
+    </group>
+</menu>
