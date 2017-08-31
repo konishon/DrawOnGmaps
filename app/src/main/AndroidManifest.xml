@@ -19,10 +19,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".manualtracking.ManualTrackingActivity">
 
         </activity>
-        <activity android:name=".BaseActivity">
+
+        <activity
+            android:exported="true"
+            android:name=".autotracking.AutotrackingActivity">
+
+        </activity>
+        <activity android:name=".MainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +36,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".autotracking.LocationUpdatesService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,0 +1,23 @@
+<tabs>
+
+    <tab
+        inActiveColor="#BF000000"
+        activeColor="#BF000000"
+        id="@+id/tab_clear_drawing"
+        icon="@drawable/ic_clear_all_white_24dp"
+        title="Clear all" />
+    <tab
+        inActiveColor="#BF000000"
+        activeColor="#BF000000"
+        id="@+id/tab_save_drawing"
+        icon="@drawable/ic_save_white_24dp"
+        title="Save" />
+    <tab
+        inActiveColor="#BF000000"
+        activeColor="#BF000000"
+        id="@+id/tab_draw_options"
+        icon="@drawable/ic_polyline_state_active_24dp"
+        title="Draw" />
+
+
+</tabs>

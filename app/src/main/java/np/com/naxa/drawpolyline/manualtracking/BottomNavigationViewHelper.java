@@ -1,4 +1,4 @@
-package np.com.naxa.drawpolyline;
+package np.com.naxa.drawpolyline.manualtracking;
 
 /**
  * Created on 8/24/17

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="np.com.naxa.drawpolyline.BaseActivity">
+    tools:context="np.com.naxa.drawpolyline.MainActivity">
 
     <Button
-        android:id="@+id/lauch"
-        android:text="Launch"
+        android:id="@+id/btn_lauch_manual_mode"
+        android:text="Launch Manual Mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_lauch_auto_mode"
+        android:text="Launch Auto Mode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
-</RelativeLayout>
+</LinearLayout>

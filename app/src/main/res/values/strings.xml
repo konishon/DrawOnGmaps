@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">DrawPolyLine</string>
     <string name="google_maps_key">AIzaSyCXyaQCtIFtin7b-dJ3XHl6XVd8aLV9E6w</string>
+    <string name="location_updated">Location Updated %1$s </string>
+    <string name="launch_activity">Launch Auto Tracking</string>
+    <string name="remove_location_updates">Remove Location Updates</string>
+    <string name="request_location_updates">Request Location Updates</string>
+    <string name="permission_rationale">Location permission is required to collect GPS provided data.</string>
+    <string name="ok">OK</string>
+    <string name="permission_denied_explanation">GPS provided data cannot be collected when permission is denied.</string>
+    <string name="settings">SETTINGS</string>
 </resources>
