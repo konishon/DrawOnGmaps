@@ -365,7 +365,7 @@ public class ManualTrackingActivity extends AppCompatActivity implements OnMapRe
                 break;
 
             case R.id.tab_save_drawing:
-                showMsg("Coming soon");
+                showMsg("Saving is disabled");
                 break;
 
             case R.id.tab_draw_options:

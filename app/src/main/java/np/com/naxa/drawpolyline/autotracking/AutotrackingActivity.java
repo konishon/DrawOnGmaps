@@ -85,7 +85,7 @@ import np.com.naxa.drawpolyline.R;
  * notification. This dismisses the notification and stops the service.
  */
 public class AutotrackingActivity extends AppCompatActivity implements
-        SharedPreferences.OnSharedPreferenceChangeListener, OnMapReadyCallback, OnTabSelectListener, OnTabReselectListener {
+        SharedPreferences.OnSharedPreferenceChangeListener, OnMapReadyCallback {
     private static final String TAG = AutotrackingActivity.class.getSimpleName();
     @BindView(R.id.bottomBar)
     BottomBar bottomBar;
@@ -141,8 +141,6 @@ public class AutotrackingActivity extends AppCompatActivity implements
         myReceiver = new MyReceiver();
         setContentView(R.layout.activity_auto_tracking);
         ButterKnife.bind(this);
-        bottomBar.setOnTabReselectListener(this);
-        bottomBar.setOnTabSelectListener(this);
 
 
         // Check that the user hasn't revoked permissions by going to Settings.
@@ -173,6 +171,26 @@ public class AutotrackingActivity extends AppCompatActivity implements
         // that since this activity is in the foreground, the service can exit foreground mode.
         bindService(new Intent(this, LocationUpdatesService.class), mServiceConnection,
                 Context.BIND_AUTO_CREATE);
+
+
+        mRequestLocationUpdatesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!checkPermissions()) {
+                    requestPermissions();
+                } else {
+                    mService.requestLocationUpdates();
+                }
+            }
+        });
+
+        mRemoveLocationUpdatesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mService.removeLocationUpdates();
+                clearAllDrawings();
+            }
+        });
     }
 
     @Override
@@ -352,21 +370,6 @@ public class AutotrackingActivity extends AppCompatActivity implements
 
     }
 
-    @Override
-    public void onTabReSelected(@IdRes int tabId) {
-        switch (tabId) {
-            case R.id.tab_save_drawing:
-                saveDrawings();
-                break;
-            case R.id.tab_clear_drawing:
-                mService.removeLocationUpdates();
-                clearAllDrawings();
-                break;
-            case R.id.tab_draw_options:
-                startRequesting();
-                break;
-        }
-    }
 
     private void startRequesting() {
         if (!checkPermissions()) {
@@ -378,22 +381,6 @@ public class AutotrackingActivity extends AppCompatActivity implements
 
     private void saveDrawings() {
         showMsg("Saving is disabled");
-    }
-
-    @Override
-    public void onTabSelected(@IdRes int tabId) {
-        switch (tabId) {
-            case R.id.tab_save_drawing:
-                saveDrawings();
-                break;
-            case R.id.tab_clear_drawing:
-                mService.removeLocationUpdates();
-                clearAllDrawings();
-                break;
-            case R.id.tab_draw_options:
-                startRequesting();
-                break;
-        }
     }
 
 

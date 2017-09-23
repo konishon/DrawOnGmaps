@@ -33,6 +33,7 @@
 
 
     <com.roughike.bottombar.BottomBar
+        android:visibility="gone"
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -40,7 +41,7 @@
         app:bb_tabXmlResource="@xml/auto_bottombar_tabs" />
 
     <LinearLayout
-        android:visibility="gone"
+
         android:background="@color/grey"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"

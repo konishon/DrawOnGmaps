@@ -19,13 +19,26 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".manualtracking.ManualTrackingActivity">
+        <activity
+            android:name=".manualtracking.ManualTrackingActivity"
+            android:parentActivityName=".MainActivity">
 
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
 
+
         <activity
+            android:name=".autotracking.AutotrackingActivity"
             android:exported="true"
-            android:name=".autotracking.AutotrackingActivity">
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
 
         </activity>
         <activity android:name=".MainActivity">
